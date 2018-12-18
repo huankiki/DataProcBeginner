@@ -3,4 +3,3 @@
 
 
 ##
-**string_similarity：** 基于WER的字符串相似度计算
