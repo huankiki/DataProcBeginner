@@ -1,11 +1,20 @@
 # DataProc
-入门文本处理和分析。
-
-
-## 阅读
-- **《数学之美》**  
-![reading_notes_20190301](./graph/sxzm_20190301.png)
+入门文本处理和分析，包括且不限于：文本挖掘、自然语言处理（统计学基础&深度学习inNLP&常见应用）、机器学习（分类等）。
 
 ## 文本挖掘与分析
-[text-mining-and-analytics-coursera](./text-mining-and-analytics-coursera/README.md)
+课程&学习笔记：[text-mining-and-analytics-coursera](./text-mining-and-analytics-coursera/README.md)
 
+## Reading
+- **《数学之美》**  
+![数学之美_notes_20190301](./graph/数学之美_20190301.png)
+
+- **《概率论与数理统计》陈希孺**  
+这本书通俗易懂，从中学习了几个非常基础的概念，特别是在学习模型时会涉及的几个统计学定义。
+ - 条件概率
+ ![条件概率](./graph/条件概率.png)
+ - 贝叶斯公式
+ ![贝叶斯公式](./graph/贝叶斯公式.png)
+ - 极大似然估计
+ ![极大似然估计](./graph/极大似然估计.png)
+ - 贝叶斯学派（**先验概率 & 后验概率**），用了很多篇幅来描述贝叶斯学派的思想，非常好理解  
+ More >> *朴素贝叶斯法*【待深入了解NB方法的时候再贴出来】
