@@ -43,11 +43,11 @@ ongoing
 在已知B事件发生的情况下A事件发生的概率，即AB两事件的交集除以B事件发生的概率。
 ![](./graph/Bayes_1.png)
 ![](./graph/Bayes_2.png)  
- - P(A)是A的**先验概率**（Prior probability）或边缘概率。之所以称为"先验"是因为它不考虑任何B方面的因素，在B事件发生之前，对A事件概率的一个判断。
- - P(A|B)是已知B发生后A的条件概率，也由于得自B的取值而被称作**A的后验概率**（Posterior probability）。
- - P(B|A)是已知A发生后B的条件概率，也由于得自A的取值而被称作B的后验概率，也被称作**似然函数**。
- - P(B)是B的先验概率或边缘概率，也作标准化常量（normalized constant）。
- - P(B|A)/P(B)是标准似然度（standardised likelihood），表示事件B为事件A发生提供的支持程度。
+  - P(A)是A的**先验概率**（Prior probability）或边缘概率。之所以称为"先验"是因为它不考虑任何B方面的因素，在B事件发生之前，对A事件概率的一个判断。
+  - P(A|B)是已知B发生后A的条件概率，也由于得自B的取值而被称作**A的后验概率**（Posterior probability）。
+  - P(B|A)是已知A发生后B的条件概率，也由于得自A的取值而被称作B的后验概率，也被称作**似然函数**。
+  - P(B)是B的先验概率或边缘概率，也作标准化常量（normalized constant）。
+  - P(B|A)/P(B)是标准似然度（standardised likelihood），表示事件B为事件A发生提供的支持程度。
         Bayes法则可表述为：
         后验概率 = 似然函数 * 先验概率 / 标准化常量
         后验概率 = 标准似然度 * 先验概率  
