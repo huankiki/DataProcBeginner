@@ -30,10 +30,11 @@ ongoing
 - **[word2vec 中的数学原理详解](https://www.cnblogs.com/peghoty/p/3857839.html)**，写得太好了，收获很多！（P.S.也想有这种弄懂了一个知识点之后的写作风格）
 
 ## 贝叶斯公式 & 最大似然估计 & 最大后验概率估计
-参考资料：  
+ - 参考资料  
 [贝叶斯估计、最大似然估计、最大后验概率估计](https://www.jianshu.com/p/9c153d82ba2d)  
 [最大似然估计](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247487202&idx=1&sn=1f3c22a6e16f5611cfe92356ccc0ff74&chksm=ebb43636dcc3bf20892295a5570ed89a533172ad557b2bcf2925ba6848dfacfcf7997d18691d&scene=21#wechat_redirect)  
-[最大后验概率估计](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247487221&idx=2&sn=3f8b6a65276f34adb9ee35322ace7d09&chksm=ebb43621dcc3bf37d3708be73bb1945f579992bbc05358157f46d23b48713768332db8431639&scene=21#wechat_redirect)
+[最大后验概率估计](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247487221&idx=2&sn=3f8b6a65276f34adb9ee35322ace7d09&chksm=ebb43621dcc3bf37d3708be73bb1945f579992bbc05358157f46d23b48713768332db8431639&scene=21#wechat_redirect)  
+
 - 概率（probabilty）V.S. 统计（statistics）  
 概率研究的问题是，已知一个模型和参数，怎么去预测这个模型产生的结果的特性（如均值，方差，协方差等）。统计研究的问题则相反。统计是，有一堆数据，要利用这堆数据去预测模型和参数。  
 **概率是已知模型和参数，推数据。统计是已知数据，推模型和参数。  
@@ -41,29 +42,31 @@ ongoing
 
 - 贝叶斯公式  
 在已知B事件发生的情况下A事件发生的概率，即AB两事件的交集除以B事件发生的概率。
-![](./graph/Bayes_1.png)
-![](./graph/Bayes_2.png)  
+![BayesLaw](./graph/BayesLaw.png)
   - P(A)是A的**先验概率**（Prior probability）或边缘概率。之所以称为"先验"是因为它不考虑任何B方面的因素，在B事件发生之前，对A事件概率的一个判断。
-  - P(A|B)是已知B发生后A的条件概率，也由于得自B的取值而被称作**A的后验概率**（Posterior probability）。
+  - P(A|B)是已知B发生后A的条件概率，也由于得自B的取值而被称作**A的后验概率**（Posterior probability），表示事件B发生后，事件A发生的置信度。
   - P(B|A)是已知A发生后B的条件概率，也由于得自A的取值而被称作B的后验概率，也被称作**似然函数**。
   - P(B)是B的先验概率或边缘概率，也作标准化常量（normalized constant）。
-  - P(B|A)/P(B)是标准似然度（standardised likelihood），表示事件B为事件A发生提供的支持程度。  
-  
->  **Bayes法则可表述为：  
->      后验概率 = 似然函数 * 先验概率 / 标准化常量  
->      后验概率 = 标准似然度 * 先验概率**  
+  - **P(B|A)/P(B)是标准似然度**（standardised likelihood），表示事件B为事件A发生提供的支持程度。   
 
+>**Bayes法则可表述为：  
+>后验概率 = 似然函数 \* 先验概率 / 标准化常量  
+>后验概率 = 标准似然度 \* 先验概率**  
 
-- 似然函数与概率函数     
+- 似然函数与概率函数  
+在英文中，似然（likelihood）和概率（probability）是同义词，都指事件发生的可能性。**但在统计中，似然与概率是不同的东西。概率是已知参数，对结果可能性的预测。似然是已知结果，对参数是某个值的可能性预测**。     
 对于函数P(x|θ)，从不同的观测角度来看可以分为以下两种情况：
   - 如果θ已知且保持不变，x是变量，则P(x|θ)称为概率函数，表示不同x出现的概率。
-  - 如果x已知且保持不变，θ是变量，则P(x|θ)称为似然函数，表示不同θ下，x出现的概率，也记作L(θ|x)或L(x;θ)或f(x;θ)。   
+  - 如果x已知且保持不变，θ是变量，则P(x|θ)称为似然函数，表示不同θ下，x出现的概率，也记作L(θ|x)或L(x;θ)或f(x;θ)。
+
 
 - 最大似然估计 & 最大后验概率估计  
-最大似然估计(Maximum Likelihood Estimation, 简写为MLE，又称极大似然估计)。  
-最大后验概率估计(Maximum A Posteriori Estimation，简写为MAP)。   
-最大似然估计的思想是使得观测数据（样本）发生概率最大的参数就是最好的参数。
-最大似然估计是求参数θ，使似然函数p(x0|θ)最大。
+最大似然估计(Maximum Likelihood Estimation, 简写为MLE，又称极大似然估计)，最大后验概率估计(Maximum A Posteriori Estimation，简写为MAP)。   
+![MLE_MAP](./graph/MLE_MAP.png)  
+
+## 生成模型与判别模型
+
+## 最大熵模型
 
 ## Reading
 - **《数学之美》**  
