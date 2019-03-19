@@ -42,7 +42,7 @@ ongoing
 
 - 贝叶斯公式  
 在已知B事件发生的情况下A事件发生的概率，即AB两事件的交集除以B事件发生的概率。
-![BayesLaw](./graph/BayesLaw.png)
+  ![BayesLaw](./graph/BayesLaw.png)
   - P(A)是A的**先验概率**（Prior probability）或边缘概率。之所以称为"先验"是因为它不考虑任何B方面的因素，在B事件发生之前，对A事件概率的一个判断。
   - P(A|B)是已知B发生后A的条件概率，也由于得自B的取值而被称作**A的后验概率**（Posterior probability），表示事件B发生后，事件A发生的置信度。
   - P(B|A)是已知A发生后B的条件概率，也由于得自A的取值而被称作B的后验概率，也被称作**似然函数**。
@@ -62,9 +62,31 @@ ongoing
 
 - 最大似然估计 & 最大后验概率估计  
 最大似然估计(Maximum Likelihood Estimation, 简写为MLE，又称极大似然估计)，最大后验概率估计(Maximum A Posteriori Estimation，简写为MAP)。   
-![MLE_MAP](./graph/MLE_MAP.png)  
+  ![MLE_MAP](./graph/MLE_MAP.png)  
 
 ## 生成模型与判别模型
+- 基本概念和区别  
+  - 监督学习方法可以分为生成方法(generative approach)和判别方法(discriminative approach)。所学到的模型分别为生成模型(generative model)和判别模型(discriminative model)。  
+  - 生成方法由数据学习 **联合概率分布P(X,Y)**，然后求出条件概率分布P(Y|X)=P(X,Y)/P(X)作为预测的模型。典型的生成模型有：朴素贝叶斯法、马尔科夫模型、高斯混合模型。  
+  - 判别方法由数据直接学习决策函数f(X)或者 **条件概率分布P(Y|X)** 作为预测的模型，即判别模型。典型的判别模型包括：k近邻法、感知机、决策树、逻辑斯蒂回归模型、最大熵模型、支持向量机、boosting方法和条件随机场等。
+
+
+- 概率图模型  
+监督学习的两个核心问题：分类问题和标注问题。可以认为标注问题是分类问题的一个推广。   
+可以从概率图的角度来理解几个常见模型的区别。暂不列出各个模型的深入描述。
+  - NB，朴素贝叶斯模型，联合概率分布，生成模型，用于分类问题
+  - HMM，隐含马尔科夫模型，联合概率分布，生成模型，用于标注问题，是NB的一个推广
+  - ME，最大熵模型，条件概率分布，判别模型，用于分类问题
+  - CRF，条件随机场，条件概率模型，判别模型，用于标注问题，是ME的一个推广  
+  
+
+  ![Probabilistic_Models.png](./graph/Probabilistic_Models.png)
+
+- 参考资料
+  - 李航. 统计学习方法[M]. 清华大学出版社, 2012.
+  - [机器学习“判定模型”和“生成模型”有什么区别？](https://www.zhihu.com/question/20446337)
+  - [【机器学习基础】生成模型和判别模型](https://www.jianshu.com/p/d195b887a32e)
+  - **Klinger, R & Tomanek, K. (2007). Classical Probabilistic Models and Conditional Random Fields. Tech Rep TR07-2-013. **
 
 ## 最大熵模型
 
