@@ -86,7 +86,8 @@ ongoing
   - 李航. 统计学习方法[M]. 清华大学出版社, 2012.
   - [机器学习“判定模型”和“生成模型”有什么区别？](https://www.zhihu.com/question/20446337)
   - [【机器学习基础】生成模型和判别模型](https://www.jianshu.com/p/d195b887a32e)
-  - **Klinger, R & Tomanek, K. (2007). Classical Probabilistic Models and Conditional Random Fields. Tech Rep TR07-2-013. **
+  - **Klinger, R & Tomanek, K. (2007). Classical Probabilistic Models and Conditional Random Fields. Tech Rep TR07-2-013. **  
+  
 
 ## 最大熵模型
 
