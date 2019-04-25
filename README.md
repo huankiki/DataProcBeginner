@@ -3,8 +3,8 @@
 **（原创笔记）**
 
 ## Book《深度学习入门之PyTorch》
-此书亮点：1，循序渐进，且全部有Pytorch的对应代码；2，内容质量很好，
-书中所有代码：[code-of-learn-deep-learning-with-pytorch](https://github.com/L1aoXingyu/code-of-learn-deep-learning-with-pytorch)
+此书亮点：1，循序渐进，且全部有Pytorch的对应代码；2，内容质量很好。  
+书中所有代码：[code-of-learn-deep-learning-with-pytorch](https://github.com/L1aoXingyu/code-of-learn-deep-learning-with-pytorch)  
 参考此书和作者的代码，对部分实现（Logistic Regression、RNN）等重新编排成笔记: [deep_learning_with_pytorch_note](./deep_learning_with_pytorch_note/)。
 
 
