@@ -8,10 +8,22 @@
   - 同样也听了一些很好的开源课，但欠缺自我思考、总结，也就是没有主动学习，偏被动学习，只有听，没有思考和实践。所以这些理论知识对我而言是悬浮的，没有稳固的基础。
   - 眼高手低，缺乏实践，这不是好的学习方法。
   - Tips：后续如果再听开源课时，通过实际行动改变这种被动学习的惰性。  
-  
+
 书中所有代码：[code-of-learn-deep-learning-with-pytorch](https://github.com/L1aoXingyu/code-of-learn-deep-learning-with-pytorch)  
 参考此书和作者的代码，对部分实现（Logistic Regression、RNN）等重新编排成笔记： [deep_learning_with_pytorch_note](./deep_learning_with_pytorch_note/)。
 
+## HSE-Natural Language Processing-Coursera
+俄罗斯国立高等经济大学的[自然语言处理课程](https://www.coursera.org/learn/language-processing)  
+本课程适合对自然语言处理（机器学习、NLP常见应用）有一定了解的人学习。课程简洁明了，短小精悍，既包含对理论的介绍，也有很多应用、实践，尤其是课程的作业。  
+课程笔记：[HSE_NLP_Note](./hse_nlp/readme.md)  
+课程简介如下，包括：传统NLP、深度学习、文本分类、语言模型、序列标注、语义表示、对话系统等。
+- Week 1，Intro and text classification
+- Week 2，Language modeling and sequence tagging
+- Week 3，Vector Space Models of Semantics
+- Week 4，Sequence to sequence tasks
+- Week 5，Dialog systems  
+
+注： 本课程是 高级机器学习 专项课程的一部分(a part of Advanced Machine Learning of National Research University Higher School of Economics)，可参考Coursera课程页面。
 
 ## 文本挖掘与分析
 课程&学习笔记：[text-mining-and-analytics-coursera](./text-mining-and-analytics-coursera/README.md)
