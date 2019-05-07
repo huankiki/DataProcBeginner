@@ -3,14 +3,15 @@
 **（原创笔记）**
 
 ## Book《深度学习入门之PyTorch》
-此书亮点：1，循序渐进，而且有对应的pytorch代码（jupyter notebook的形式 + Python3）；2，全是干货，理论&code！  
-通过看书看代码有几点感受：
-  - 同样也听了一些很好的开源课，但欠缺自我思考、总结，也就是没有主动学习，偏被动学习，只有听，没有思考和实践。所以这些理论知识对我而言是悬浮的，没有稳固的基础。
-  - 眼高手低，缺乏实践，这不是好的学习方法。
-  - Tips：后续如果再听开源课时，通过实际行动改变这种被动学习的惰性。  
-
 书中所有代码：[code-of-learn-deep-learning-with-pytorch](https://github.com/L1aoXingyu/code-of-learn-deep-learning-with-pytorch)  
-参考此书和作者的代码，对部分实现（Logistic Regression、RNN）等重新编排成笔记： [deep_learning_with_pytorch_note](./deep_learning_with_pytorch_note/)。
+参考此书和作者的代码，对部分实现（Logistic Regression、RNN）等重新编排成笔记： [deep_learning_with_pytorch_note](./deep_learning_with_pytorch_note/)。  
+此书亮点：<br>1，循序渐进，而且有对应的pytorch代码（jupyter notebook的形式 + Python3）<br>2，全是干货，理论&code   
+通过看书看代码有几点感受：
+- 同样也听了一些很好的开源课，但欠缺自我思考、总结，也就是没有主动学习，偏被动学习，只有听，没有思考和实践。所以这些理论知识对我而言是悬浮的，没有稳固的基础。
+- 眼高手低，缺乏实践，这不是好的学习方法。
+- Tips：后续如果再听开源课时，通过实际行动改变这种被动学习的惰性。  
+
+注：已经完成这本入门书的第一次学习。(done~2019/5/8)
 
 ## HSE-Natural Language Processing-Coursera
 俄罗斯国立高等经济大学的[自然语言处理课程](https://www.coursera.org/learn/language-processing)  
