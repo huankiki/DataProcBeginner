@@ -1,3 +1,6 @@
+## Note on 《深度学习入门之PyTorch》
+Jupyter Notebook + Python 3，理论+code。  
+
 ### 深度学习的历史
 - Year 1958~1969，单层感知机(Perceptron)，本质是线性模型，只能处理线性分类问题。研究停滞近二十年。
 - Year 1986~1998，多层感知机引入Sigmoid非线性映射 + 反向传播算法(BP算法) >> 万能逼近定理。但是BP+Sigmoid存在梯度消失问题。
@@ -8,6 +11,7 @@
   - 第一，采用Sigmoid等函数，反向传播求梯度时，求导计算量很大，而ReLU求导非常容易；
   - 第二，对于深层网络，Sigmoid函数反向传播时，很容易就会出现梯度消失的情况（在Sigmoid接近饱和区时，变换太缓慢，导数趋于0），从而无法完成深层网络的训练；
   - 第三，ReLU会使一部分神经元的输出为0，这样就造成了网络的稀疏性，并且减少了参数的相互依存关系，缓解了过拟合问题的发生。
+
 
 ### PyTorch基础
 ```
@@ -43,9 +47,19 @@ class LogisticRegression(nn.Module):  # 自定义神经网络的名称
     ...
 
 ```
+
 ### 多层全连接神经网络
-注：来自本书开源代码，Jupyter Notebook + Python 3，内容详尽丰富，有代码。  
 [线性回归模型和梯度下降](./ch3_nn/linear-regression-gradient-descend.ipynb)  
 [分类器：Logistic回归模型](./ch3_nn/logistic-regression/logistic-regression.ipynb)  
-[神经网络简介，PyTorch构建nn模型的两个模块: Sequential和Module](./ch3_nn/nn-sequential-module.ipynb)
+[神经网络简介，PyTorch构建nn模型的两个模块: Sequential和Module](./ch3_nn/nn-sequential-module.ipynb)  
+[反向传播算法](./ch3_nn/bp.ipynb)  
+梯度下降法的变式，默认的优化算法为Adam。  
+[实现MNIST手写数字的多分类问题：softmax、交叉熵、PyTorch实现](./ch3_nn/deep-nn.ipynb)  
+![softmax](./ch3_nn/softmax.png)  
+![cross entropy](./ch3_nn/loss_function.png)  
+>小结：1，理论要弄明白、透彻；2，实践必不可少。这两点是之前缺乏的，特点就是只听课，不看书、不复习、不实践。
+
+
+### 卷积神经网络CNN
+CNN在图像分类、图像增强上的应用 with PyTorch(略)
 
