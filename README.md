@@ -2,9 +2,9 @@
 入门文本处理和分析，包括且不限于：文本挖掘、自然语言处理（统计学基础&深度学习inNLP&常见应用）、机器学习（分类等）。  
 **（原创笔记）**
 
-## Book《深度学习入门之PyTorch》
+## 《深度学习入门之PyTorch》
 书中所有代码：[code-of-learn-deep-learning-with-pytorch](https://github.com/L1aoXingyu/code-of-learn-deep-learning-with-pytorch)  
-参考此书和作者的代码，对部分实现（Logistic Regression、RNN）等重新编排成笔记： [deep_learning_with_pytorch_note](./deep_learning_with_pytorch_note/)。  
+Note：[deep_learning_with_pytorch_note](./deep_learning_with_pytorch_note/)，参考此书内容和作者的开源代码，对部分实现（Logistic Regression、RNN）等重新编排而成。  
 此书亮点：<br>1，循序渐进，而且有对应的pytorch代码（jupyter notebook的形式 + Python3）<br>2，全是干货，理论&code   
 >通过看书看代码有几点感受：
 >- 同样也听了一些很好的开源课，但欠缺自我思考、总结，也就是没有主动学习，偏被动学习，只有听，没有思考和实践。所以这些理论知识对我而言是悬浮的，没有稳固的基础。
