@@ -61,5 +61,25 @@ class LogisticRegression(nn.Module):  # 自定义神经网络的名称
 
 
 ### 卷积神经网络CNN
-CNN在图像分类、图像增强上的应用 with PyTorch(略)
+CNN在图像分类、图像增强上的应用 with PyTorch（略）  
+另，生成对抗网络(GAN)和增强学习(RL)的相关内容，也暂时省略。
+
+
+### 循环神经网络
+
+
+### 实践：Neural Transfer(迁移学习) with PyTorch
+官方参考资料：[PyTorch Tutorial Neural Style Transfer](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)  
+自己动手：1，收集试验图片；2，下载预训练模型vgg19；3，训练和试验。  
+修改后的notebook：[neural_style_tutorial_notebook](./neural_transfer_pytorch/neural_style_tutorial_revision.ipynb)  
+试验结果如下，其中：第一排为结果，第二排为原始图片，第三排为风格图片。  
+还是很有意思的~。后续可以找到更多有趣的照片继续试验。  
+
+![neural_tran_rst.png](./neural_transfer_pytorch/picture/neural_tran_rst.png)
+
+其中遇到的问题有：
+- 没有GPU，所以图片大小只能为128，分辨率略低。若有GPU，图片大小为512；
+- 收集的图片为4通道，会报错，最终定位为图片通道问题，加入两行代码即可；
+- 最好先下载预训练模型vgg19：vgg19-dcbb9e9d.pth，大小为549M，下载完成后放入模型的默认位置：{root_dir}/.torch/models/
+
 
