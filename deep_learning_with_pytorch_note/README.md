@@ -43,4 +43,9 @@ class LogisticRegression(nn.Module):  # 自定义神经网络的名称
     ...
 
 ```
+### 多层全连接神经网络
+注：来自本书开源代码，Jupyter Notebook + Python 3，内容详尽丰富，有代码。  
+[线性回归模型和梯度下降](./ch3_nn/linear-regression-gradient-descend.ipynb)  
+[分类器：Logistic回归模型](./ch3_nn/logistic-regression/logistic-regression.ipynb)  
+[神经网络简介，PyTorch构建nn模型的两个模块: Sequential和Module](./ch3_nn/nn-sequential-module.ipynb)
 
