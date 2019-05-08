@@ -11,8 +11,9 @@ Note：[deep_learning_with_pytorch_note](./deep_learning_with_pytorch_note/)，�
 >- 眼高手低，缺乏实践，这不是好的学习方法。
 >- Tips：后续如果再听开源课时，通过实际行动改变这种被动学习的惰性。  
 
-注：已经完成这本入门书的第一次学习。(done~2019/5/8)  
-**附：Learn by Doing，PyTorch官方教程，这么好的资源：**  [PYTORCH TUTORIALS](https://pytorch.org/tutorials/#)
+注：已经完成这本入门书的第一次学习，但还是很简易的知识点。(done~2019/5/8)  
+知识点：1)初步了解PyTorch；2)深度学习基础；3)RNN；4)PyTorch实践。  
+**附：Learn by Doing，PyTorch官方教程，好资源：**  [PYTORCH TUTORIALS](https://pytorch.org/tutorials/#)
 
 ## HSE-Natural Language Processing-Coursera
 俄罗斯国立高等经济大学的[自然语言处理课程](https://www.coursera.org/learn/language-processing)  
