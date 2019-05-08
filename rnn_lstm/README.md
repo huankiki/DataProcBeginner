@@ -9,14 +9,14 @@
 - [循环神经网络(RNN)模型与前向反向传播算法](https://www.cnblogs.com/pinard/p/6509630.html)，简易版公式推导
 - [LSTM模型与前向反向传播算法](https://www.cnblogs.com/pinard/p/6519110.html)，简易版公式推导
 
-------
+
 ## RNN简介
 ![rnn](./graph/rnn.jpg)  
 
 一个简单的循环神经网络由输入层、隐藏层和输出层组成。与全连接神经网络相比，增加了中间的W。循环神经网络的隐藏层的值s不仅仅取决于当前这次的输入x，还取决于上一次隐藏层的值s。  
 原始RNN可以很好的解决短时依赖问题，但无法处理长距离依赖。
 
-------
+
 ## LSTM简介
 - 原始RNN
 ![rnn](./graph/LSTM3-SimpleRNN.png)  
