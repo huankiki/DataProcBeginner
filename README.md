@@ -4,8 +4,8 @@
 
 ## 《深度学习入门之PyTorch》
 书中所有代码：[code-of-learn-deep-learning-with-pytorch](https://github.com/L1aoXingyu/code-of-learn-deep-learning-with-pytorch)  
-Note：[deep_learning_with_pytorch_note](./deep_learning_with_pytorch_note/)，参考此书内容和作者的开源代码，对部分实现（Logistic Regression、RNN）等重新编排而成。  
-此书亮点：<br>1，循序渐进，而且有对应的pytorch代码（jupyter notebook的形式 + Python3）<br>2，全是干货，理论&code   
+**Note：[deep_learning_with_pytorch_note](./deep_learning_with_pytorch_note/)**，参考此书内容和作者的开源代码，对部分实现（Logistic Regression、RNN）等重新编排而成。  
+此书亮点：<br>1，循序渐进，而且有对应的pytorch代码（jupyter notebook的形式 + Python3）<br>2，全是干货，理论&code，适合入门者   
 >通过看书看代码有几点感受：
 >- 同样也听了一些很好的开源课，但欠缺自我思考、总结，也就是没有主动学习，偏被动学习，只有听，没有思考和实践。所以这些理论知识对我而言是悬浮的，没有稳固的基础。
 >- 眼高手低，缺乏实践，这不是好的学习方法。
@@ -13,7 +13,7 @@ Note：[deep_learning_with_pytorch_note](./deep_learning_with_pytorch_note/)，�
 
 注：已经完成这本入门书的第一次学习，但还是很简易的知识点。(done~2019/5/8)  
 知识点：1)初步了解PyTorch；2)深度学习基础；3)RNN；4)PyTorch实践。  
-**附：Learn by Doing，PyTorch官方教程，好资源：**  [PYTORCH TUTORIALS](https://pytorch.org/tutorials/#)
+**附：Learn by Doing，PyTorch官方教程，好资源： [PyTorch Tutorials](https://pytorch.org/tutorials/#)**
 
 ## HSE-Natural Language Processing-Coursera
 俄罗斯国立高等经济大学的[自然语言处理课程](https://www.coursera.org/learn/language-processing)  
