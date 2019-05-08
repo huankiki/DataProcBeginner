@@ -40,13 +40,15 @@ RNN在训练中很容易发生梯度爆炸和梯度消失，这导致训练时�
 对于梯度爆炸问题，可以设置一个梯度阈值，当梯度超过这个阈值的时候直接截取。  
 RNN的变种结构，长短时记忆网络（LTSM）和Gated Recurrent Unit（GRU），可以解决梯度消失的问题。  
 
-**我们将本节提到的RNN为原始RNN，结构抽象图如下。**
+**我们将本节提到的RNN为原始RNN，结构抽象图如下所示。**
 ![rnn](./graph/LSTM3-SimpleRNN.png)
 
 
 ## LSTM简介
-LSTM，一定程度上解决了长时依赖的问题，结构抽象图如下所示。比原始RNN的结构更复杂。
+LSTM，一定程度上解决了长时依赖的问题，结构抽象图如下所示，比原始RNN的结构更复杂。  
+原始RNN的隐藏层只有一个状态h，从结构图可以看出LSTM多了一个隐藏状态，新增加的隐藏状态称为单元状态(cell state)，记为C。
 ![lstm](./graph/LSTM3-chain.png)  
+![lstm-c](./graph/LSTM3-C-line.png)   
 
 - 遗忘门
 ![lstm-f](./graph/LSTM3-focus-f.png)  
@@ -57,5 +59,5 @@ LSTM，一定程度上解决了长时依赖的问题，结构抽象图如下所�
 - 输出门
 ![lstm-o](./graph/LSTM3-focus-o.png)  
 
-![lstm-c](./graph/LSTM3-C-line.png)   
-![lstm-gate](./graph/LSTM3-var-peepholes.png)  
+
+-
