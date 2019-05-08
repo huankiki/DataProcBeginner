@@ -15,6 +15,10 @@
 知识点：1)初步了解PyTorch；2)深度学习基础；3)RNN；4)PyTorch实践。  
 **附：Learn by Doing，PyTorch官方教程，好资源： [PyTorch Tutorials](https://pytorch.org/tutorials/#)**
 
+## RNN/LSTM
+**Note：[RNN_LSTM_Note](./rnn_lstm/)**  
+必须掌握的深度学习方法，尤其对NLP而言。通过Note中列出的一些参考资料（很棒），第一次对RNN和LSTM有了一定的理解。
+
 ## HSE-Natural Language Processing-Coursera
 俄罗斯国立高等经济大学的[自然语言处理课程](https://www.coursera.org/learn/language-processing)  
 本课程适合对自然语言处理（机器学习、NLP常见应用）有一定了解的人学习。课程简洁明了，短小精悍，既包含对理论的介绍，也有很多应用、实践，尤其是课程的作业。  
