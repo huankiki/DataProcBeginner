@@ -102,5 +102,10 @@ GRU对LSTM做了两个大改动，输入输出变得特别简单：
 GRU将遗忘门和输入门合并成为单一的“更新门(Update Gate)”。
 - 将单元状态(Cell State)与输出(Hidden State)合并为一个状态  
 
+## 实践：LSTM with PyTorch
+用PyTorch实现基于LSTM的词性标注模型，官网Tutorials：   
+[Sequence Model](https://pytorch.org/tutorials/beginner/nlp/sequence_models_tutorial.html#sphx-glr-beginner-nlp-sequence-models-tutorial-py)  
+[中文讲解版-Sequence Model](https://www.pytorchtutorial.com/pytorch-sequence-model-and-lstm-networks/)  
 
-■■■
+
+■

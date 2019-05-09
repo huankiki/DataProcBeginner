@@ -70,9 +70,11 @@ CNN在图像分类、图像增强上的应用 with PyTorch（略）
 ### 循环神经网络
 循环神经网络，Recurrent Neutral Network，RNN  
 长短时记忆网络，Long Short Term Memory Network, LSTM  
-理解RNN的难点在于，结构复杂，不能像之前的其他深度学习模型那样很容易的理解**RNN的前向计算和反向传播**。  
+[RNN+LSTM+PyTorch](./ch5_rnn/pytorch-rnn.ipynb)  
+[PyTorch实现RNN/LSTM中的参数介绍-1](https://pytorch-cn.readthedocs.io/zh/latest/package_references/torch-nn/#recurrent-layers)  
+[PyTorch实现RNN/LSTM中的参数介绍-2](https://pytorch.org/docs/stable/nn.html#recurrent-layers)   
+RNN的难点在于结构复杂，不能像之前的其他深度学习模型那样很容易的理解**RNN的前向计算和反向传播**。  
 **自己参考了一些资料，整理成笔记：[rnn_lstm_note](../rnn_lstm/README.md)**  
-[RNN、LSTM、GRU](./ch5_rnn/pytorch-rnn.ipynb)  
 
 ------
 ### 实践：Neural Transfer with PyTorch，迁移学习
@@ -89,4 +91,9 @@ CNN在图像分类、图像增强上的应用 with PyTorch（略）
 - 最好先下载预训练模型vgg19：vgg19-dcbb9e9d.pth，大小为549M，下载完成后放入模型的默认位置：{root_dir}/.torch/models/
 
 ------
-### 实践：
+### 实践：NLP—语言模型(N-Gram, 词向量)，LSTM for POS Tagging
+用PyTorch实现基于LSTM的词性标注模型  
+[RNN-NLP-PyTorch](./ch5_rnn/nlp/)  
+更多资料可以参考官网Tutorials：  
+[Sequence Model](https://pytorch.org/tutorials/beginner/nlp/sequence_models_tutorial.html#sphx-glr-beginner-nlp-sequence-models-tutorial-py)  
+[中文讲解版-Sequence Model](https://www.pytorchtutorial.com/pytorch-sequence-model-and-lstm-networks/)
