@@ -47,17 +47,16 @@ RNN的变种结构，长短时记忆网络（LTSM）和Gated Recurrent Unit（GR
 LSTM，一定程度上解决了长时依赖的问题，结构抽象图如下所示，比原始RNN的结构更复杂，LSTM的重复模块中有4个神经网络层，而RNN只有一个简单的层结构。  
 原始RNN的隐藏层只有一个状态h，从结构图可以看出LSTM多了一个隐藏状态，新增加的隐藏状态称为单元状态(cell state)，记为C。  
 
-
 ![lstm](./graph/LSTM3-chain.png)  
 
 在t时刻，LSTM的输入有三个：
-- 当前时刻网络的输入值 <img src="http://latex.codecogs.com/gif.latex?x_{t}" title="x_{t}" />
-- 上一时刻LSTM的输出值 <img src="http://latex.codecogs.com/gif.latex?h_{t-1}" title="h_{t-1}" />
-- 上一时刻的单元状态 <img src="http://latex.codecogs.com/gif.latex?C_{t-1}" title="C_{t-1}" />  
+- 当前时刻网络的输入值 ![](./graph/xt.gif)
+- 上一时刻LSTM的输出值 ![](./graph/ht_1.gif)
+- 上一时刻的单元状态 ![](./graph/Ct_1.gif)
 
 在t时刻，LSTM的输出有两个：
-- 当前时刻LSTM输出值 <img src="http://latex.codecogs.com/gif.latex?h_{t}" title="h_{t}" />
-- 当前时刻的单元状态 <img src="http://latex.codecogs.com/gif.latex?C_{t}" title="C_{t}" />
+- 当前时刻LSTM输出值 ![](./graph/ht.gif)
+- 当前时刻的单元状态 ![](./graph/Ct.gif)
 
 ![lstm-cell](./graph/LSTM3-Cell.png)   
 #### 门，Gate
@@ -70,17 +69,17 @@ LSTM，一定程度上解决了长时依赖的问题，结构抽象图如下所�
 - **输出门（output gate）**，控制单元状态有多少输出到LSTM的当前输出值。
 
 其中**LSTM用遗忘门和输入门来控制单元状态C，即LSTM结构图中的⊕。**  
-并且，**所有的门的系数，均是通过t时刻网络的输入 <img src="http://latex.codecogs.com/gif.latex?x_{t}" title="x_{t}" />和t-1时刻网络的输出 <img src="http://latex.codecogs.com/gif.latex?h_{t-1}" title="h_{t-1}" />来确定的。**
+并且，**所有的门的系数，均是通过t时刻网络的输入 ![](./graph/xt.gif)和t-1时刻网络的输出 ![](./graph/ht_1.gif)来确定的。**
 
 #### 遗忘门
 遗忘门和对应的衰减系数的计算。  
-如上所述，**过去记忆**的衰减系数由t时刻网络的输入 <img src="http://latex.codecogs.com/gif.latex?x_{t}" title="x_{t}" />和t-1时刻网络的输出 <img src="http://latex.codecogs.com/gif.latex?h_{t-1}" title="h_{t-1}" />共同决定。
+如上所述，**过去记忆**的衰减系数由t时刻网络的输入 ![](./graph/xt.gif)和t-1时刻网络的输出 ![](./graph/ht_1.gif)共同决定。
 ![lstm-C](./graph/LSTM3-C-line.png)  
 ![lstm-f](./graph/LSTM3-focus-f.png)  
 
 #### 输入门
-当前学习到的单元状态为 <img src="http://latex.codecogs.com/gif.latex?\tilde{C_{t}}" title="\tilde{C_{t}}" />。  
-**当前时刻学习到的记忆**的衰减系数也是由t时刻网络的输入 <img src="http://latex.codecogs.com/gif.latex?x_{t}" title="x_{t}" />和t-1时刻网络的输出 <img src="http://latex.codecogs.com/gif.latex?h_{t-1}" title="h_{t-1}" />共同决定。
+当前学习到的单元状态为 ![](./graph/Cbar_t.gif)。  
+**当前时刻学习到的记忆**的衰减系数也是由t时刻网络的输入 ![](./graph/xt.gif)和t-1时刻网络的输出 ![](./graph/ht_1.gif)共同决定。
 ![lstm-i](./graph/LSTM3-focus-i.png)  
 
 #### 单元状态的更新
@@ -91,7 +90,7 @@ LSTM，一定程度上解决了长时依赖的问题，结构抽象图如下所�
 
 #### 输出门
 t时刻的网络输出，由输出门和当前时刻t更新后的单元状态(记忆)共同确定的。  
-其中**输出门对应的当前时刻更新后的记忆的衰减系数**还是由t时刻网络的输入 <img src="http://latex.codecogs.com/gif.latex?x_{t}" title="x_{t}" />和t-1时刻网络的输出 <img src="http://latex.codecogs.com/gif.latex?h_{t-1}" title="h_{t-1}" />共同决定。  
+其中**输出门对应的当前时刻更新后的记忆的衰减系数**还是由t时刻网络的输入 ![](./graph/xt.gif)和t-1时刻网络的输出 ![](./graph/ht_1.gif)共同决定。  
 ![lstm-o](./graph/LSTM3-focus-o.png)
 
 ## GRU (Gated Recurrent Unit)
