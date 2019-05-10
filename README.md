@@ -21,6 +21,7 @@
 
 ## HSE-Natural Language Processing-Coursera
 俄罗斯国立高等经济大学的[自然语言处理课程](https://www.coursera.org/learn/language-processing)  
+课程对应的代码，[官方Github](https://github.com/hse-aml/natural-language-processing)。
 本课程适合对自然语言处理（机器学习、NLP常见应用）有一定了解的人学习。课程简洁明了，短小精悍，既包含对理论的介绍，也有很多应用、实践，尤其是课程的作业。  
 课程笔记：[HSE_NLP_Note](./hse_nlp)  
 课程简介如下，包括：传统NLP、深度学习、文本分类、语言模型、序列标注、语义表示、对话系统等。
