@@ -67,3 +67,16 @@ print(pd.DataFrame(
 ### Part III：Simple deep learning for text classification
 用深度学习的方法，实现文本分类。
 
+#### 词向量
+one-hot representation，独热向量，稀疏向量/矩阵。  
+distributed representation，分布式表示，稠密矩阵。  
+相似的词的词向量的余弦距离(cosine distance)小，即夹角小。  
+一种方法是直接将预训练好的词向量求平均值，得到文本的向量特征表示；另一种更好的方法是做卷积(n-gram) + 最大池化(max-pooling)，这样可以学习到更复杂的特征，如下图所示，2-gram和3-gram的卷积滤波器做卷积运算。  
+![](./graph/conv_ngram.png)
+
+#### char-level, word-level， TextCNN
+设计用来做文本分类的CNN神经网络结构，第一次提出是2014年，参考文献：[Convolutional Neural Networks for Sentence Classification-Yoon Kim](https://arxiv.org/abs/1408.5882)  
+（内心独白，2014年我在哪里？我在做啥???...）  
+
+
+
