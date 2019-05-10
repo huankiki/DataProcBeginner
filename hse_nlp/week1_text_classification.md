@@ -1,13 +1,19 @@
 # Week 1
 text classification，文本分类
 
+------
 ### Part I: Introduction to NLP and our course
 方法：基于规则的方法，机器学习，深度学习。  
 ![course_content](./graph/week1_1_1.png)
 
+------
 ### Part II：Text classification
+Identify traditional pipeline for text preprocessing and classification.  
+了解文本信息/特征的表示方法，并用传统的机器学习方法（线性分类器）做文本分类。
+
 #### 分词(Tokenization)  
-将文本(text)看作是词(token)的序列。
+将文本(text)看作是词(token)的序列。对中文来说，分词是一个很基本并且重要的课题。  
+**在实际应用时，清洗数据、归一化数据、读取和处理数据，都是既耗时又很重要的工作，也是第一步。认识和熟悉数据，对后续模型的优化也一定的帮助。**
 
 #### 提取特征，Feature extraction
 - **BOW，Bag of words**，词袋模型，会丢失词序信息  
@@ -23,7 +29,7 @@ n-gram，即当前词和前面(n-1)个词组成一个新的短语。可以保留
 ![](./graph/tf-idf.png)   
 - BOW + n-gram + TF-IDF  
 结合以上，用TF-IDF代替简单的词频，组合成**BOW + n-gram + TF-IDF**，得到新的文本特征。    
-用sklearn实现特征提取的Python代码示例如下。
+**用sklearn实现特征提取的Python代码**示例如下。
 ```
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
@@ -48,4 +54,16 @@ print(pd.DataFrame(
 4    0.000000  0.000000  0.000000  0.000000
 
 ```
+#### Logistic回归，分类器
+情感分析，理论+数据已经准备好，***需要自己搭建一个分类器（to-do）***  
+- 数据，[IMDB movie reviews dataset](http://ai.stanford.edu/~amaas/data/sentiment/)
+- 理论，tf-idf + ngram + BOW
+
+#### Homework：标签分类
+[Homework - Predict tags on StackOverflow with linear models - Notebook](./src/week1/week1-MultilabelClassification_homework.ipynb)  
+**Solution，on-going**
+ 
+------
+### Part III：Simple deep learning for text classification
+用深度学习的方法，实现文本分类。
 
