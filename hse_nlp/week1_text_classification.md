@@ -75,8 +75,13 @@ distributed representation，分布式表示，稠密矩阵。
 ![](./graph/conv_ngram.png)
 
 #### char-level, word-level， TextCNN
-设计用来做文本分类的CNN神经网络结构，第一次提出是2014年，参考文献：[Convolutional Neural Networks for Sentence Classification-Yoon Kim](https://arxiv.org/abs/1408.5882)  
+用CNN做文本分类的方法，在2014年被第一次提出，参考文献：[Convolutional Neural Networks for Sentence Classification-Yoon Kim](https://arxiv.org/abs/1408.5882)  
 （内心独白，2014年我在哪里？我在做啥???...）  
+另外一篇文献，给出了textCNN的具体解释和调参方法：[A Sensitivity Analysis of (and Practitioners’ Guide to) Convolutional Neural Networks for Sentence Classification](https://arxiv.org/abs/1510.03820)  
+两篇文章均放在了目录下：[here](./src/week1/)
+
+#### 实践：Text-CNN for text classification with PyTorch
+**打算用PyTorch分别实现Text-CNN和LSTM的文本分类器，并比较两者的效果。(to-do)**
 
 
 
