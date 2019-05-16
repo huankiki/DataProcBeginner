@@ -34,7 +34,7 @@
 注： 本课程是 高级机器学习 专项课程的一部分(a part of Advanced Machine Learning of National Research University Higher School of Economics)，可参考Coursera课程页面。
 
 ## 正则表达式
-**Note:** [regex.ipynb](./regex/regex.ipynb)  
+**Note:** [regex](./regex/readme.md)，包括正则表达式的语法，以及Python正则表达式实践。  
 在工作中遇到的一个问题的解决方法: [demo_regex.py](./regex/demo_regex.py)，用到了正则表达式中的：位置匹配、子表达式、回溯引用等语法。
 
 ## 文本挖掘与分析
