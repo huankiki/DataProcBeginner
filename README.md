@@ -2,7 +2,7 @@
 入门文本处理和分析，包括且不限于：文本挖掘、自然语言处理（统计学基础&深度学习inNLP&常见应用）、机器学习（分类等）。  
 **（原创笔记）**
 
-## 《深度学习入门之PyTorch》
+## √《深度学习入门之PyTorch》
 书中所有代码：[code-of-learn-deep-learning-with-pytorch](https://github.com/L1aoXingyu/code-of-learn-deep-learning-with-pytorch)  
 **Note：[deep_learning_with_pytorch_note](./deep_learning_with_pytorch_note/)**，参考此书内容和作者的开源代码，对部分实现（Logistic Regression、RNN）等重新编排而成。  
 此书亮点：<br>1，循序渐进，而且有对应的pytorch代码（jupyter notebook的形式 + Python3）<br>2，全是干货，理论&code，适合入门者   
@@ -15,7 +15,7 @@
 知识点：1)初步了解PyTorch；2)深度学习基础；3)RNN；4)PyTorch实践。  
 **附：Learn by Doing，PyTorch官方教程，好资源： [PyTorch Tutorials](https://pytorch.org/tutorials/#)**
 
-## RNN/LSTM
+## √ RNN/LSTM
 **Note：[RNN_LSTM_Note](./rnn_lstm/)**  
 必须掌握的深度学习方法，尤其对NLP而言。通过Note中列出的一些参考资料（很棒），第一次对RNN和LSTM有了一定的理解。
 
@@ -33,7 +33,7 @@
 
 注： 本课程是 高级机器学习 专项课程的一部分(a part of Advanced Machine Learning of National Research University Higher School of Economics)，可参考Coursera课程页面。
 
-## 正则表达式
+## √ 正则表达式
 **Note:** [regex](./regex/readme.md)，包括正则表达式的语法，以及Python正则表达式实践。  
 在工作中遇到的一个问题的解决方法: [demo_regex.py](./regex/demo_regex.py)，用到了正则表达式中的：位置匹配、子表达式、回溯引用等语法。
 
@@ -49,7 +49,7 @@
 借鉴开源代码或工具，用三种方式实现SVM，作为练习。分别是：①SVM的python实现；②sklearn；③libsvm。
 ongoing
 
-## 词向量
+## √ 词向量
 常常听到词向量、word2vec，其实两者不是一回事。  
 **神经网络模型生成的词表示通常被称为词向量(word embedding)**，而Word2Vec是Google于2013年发布的一个用于获取Word Embedding的工具包。  
 作为一个小白，最开始着重理解这几点：  
@@ -81,7 +81,7 @@ ongoing
 - [来斯惟. 基于神经网络的词和文档语义向量表示方法研究[D]. 2016.](https://arxiv.org/abs/1611.05962)
 
 
-## 贝叶斯公式 & 最大似然估计 & 最大后验概率估计
+## √ 贝叶斯公式 & 最大似然估计 & 最大后验概率估计
  - 参考资料  
 [贝叶斯估计、最大似然估计、最大后验概率估计](https://www.jianshu.com/p/9c153d82ba2d)  
 [最大似然估计](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247487202&idx=1&sn=1f3c22a6e16f5611cfe92356ccc0ff74&chksm=ebb43636dcc3bf20892295a5570ed89a533172ad557b2bcf2925ba6848dfacfcf7997d18691d&scene=21#wechat_redirect)  
@@ -116,7 +116,7 @@ ongoing
 最大似然估计(Maximum Likelihood Estimation, 简写为MLE，又称极大似然估计)，最大后验概率估计(Maximum A Posteriori Estimation，简写为MAP)。   
   ![MLE_MAP](./graph/MLE_MAP.png)  
 
-## 生成模型与判别模型
+## √ 生成模型与判别模型
 - 基本概念和区别  
   - 监督学习方法可以分为生成方法(generative approach)和判别方法(discriminative approach)。所学到的模型分别为生成模型(generative model)和判别模型(discriminative model)。  
   - 生成方法由数据学习 **联合概率分布P(X,Y)**，然后求出条件概率分布P(Y|X)=P(X,Y)/P(X)作为预测的模型。典型的生成模型有：朴素贝叶斯法、马尔科夫模型、高斯混合模型。  
@@ -140,9 +140,6 @@ ongoing
   - [【机器学习基础】生成模型和判别模型](https://www.jianshu.com/p/d195b887a32e)
   - Klinger, R & Tomanek, K. (2007). Classical Probabilistic Models and Conditional Random Fields. Tech Rep TR07-2-013.
 
-
-## 最大熵模型
-ongoing
 
 ## Reading
 - **《数学之美》**  
