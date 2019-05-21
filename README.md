@@ -145,6 +145,12 @@ ongoing
 - **《数学之美》**  
 ![数学之美_notes_20190301](./graph/数学之美_20190301.png)
 
+- **《从零开始学Python网络爬虫》**  
+**Note： [crawler_python_from_scratch.ipynb](./crawler_python_from_scratch/crawler_python_from_scratch.ipynb)**  
+很基础的知识框架，Python爬虫相关的工具方法都提到了，但理论知识点到为止，不够详细。优点：爬虫实例很多，有代码，容易上手和理解爬虫用到的工具。  
+此书是一本和书名完全契合的、从零开始入门Python爬虫的书。  
+
+
 - **《概率论与数理统计》陈希孺**  
 这本书通俗易懂，从中学习了几个非常基础的概念，特别是在学习模型时会涉及的几个统计学定义。
   - 条件概率  
