@@ -16,7 +16,7 @@ def get_info(url):
         data = {
             'rank':rank.get_text().strip(),
             'singer':title.get_text().split('-')[0],
-            'song':title.get_text().split('-')[0],
+            'song':title.get_text().split('-')[1],
             'time':time.get_text().strip()
         }
         print(data)
