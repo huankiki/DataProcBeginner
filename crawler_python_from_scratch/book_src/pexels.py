@@ -25,9 +25,9 @@ for img in imgs:
 path = 'C://Users/LP/Desktop/photo/'
 
 for item in list:
-        data = requests.get(item,headers=headers)
-        fp = open(path+item.split('?')[0][-10:],'wb')
-        fp.write(data.content)
-        fp.close()
-        # print(item)
+    data = requests.get(item,headers=headers)
+    fp = open(path+item.split('?')[0][-10:],'wb')
+    fp.write(data.content)
+    fp.close()
+    # print(item)
 
