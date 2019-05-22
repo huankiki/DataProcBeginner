@@ -31,7 +31,7 @@ def get_music_info(url):
     else:
         style = styles[0].strip()
     time = re.findall('发行时间:</span>&nbsp;(.*?)<br />',html.text,re.S)[0].strip()
-    publishers = re.findall('出版者:.*?>(.*?)</a>',html.text,re.S)
+    publishers = re.findall('出版者:.*?>&nbsp;(.*?)<br />',html.text,re.S)
     if len(publishers) == 0:
         publisher = '未知'
     else:
