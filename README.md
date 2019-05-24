@@ -1,5 +1,5 @@
 # DataProcBeginner
-入门文本处理和分析，包括且不限于：文本挖掘、自然语言处理（统计学基础&深度学习inNLP&常见应用）、机器学习（分类等）。  
+入门文本处理和分析，包括且不限于：文本挖掘、自然语言处理（统计学基础&深度学习inNLP&常见应用）、机器学习（分类等）、爬虫、正则表达式。  
 **（原创笔记）**
 
 ## √《深度学习入门之PyTorch》
@@ -36,6 +36,14 @@
 ## √ 正则表达式
 **Note:** [regex](./regex/readme.md)，包括正则表达式的语法，以及Python正则表达式实践。  
 在工作中遇到的一个问题的解决方法: [demo_regex.py](./regex/demo_regex.py)，用到了正则表达式中的：位置匹配、子表达式、回溯引用等语法。
+
+
+## √《从零开始学Python网络爬虫》
+**Note： [crawler_python_from_scratch.ipynb](./crawler_python_from_scratch/crawler_python_from_scratch.ipynb)**  
+**实践：[爬取NLPJOB网站的职位](./crawler_python_from_scratch/nlpjob/nlpjob_crawler.py)**，URL：[NLPJOB网站](http://www.nlpjob.com/jobs)  
+
+很基础的知识框架，Python爬虫相关的工具方法都提到了，但理论知识点到为止，不够详细。优点：爬虫实例很多，有代码，容易上手和理解爬虫的基本理论和常见方法。  
+此书是一本和书名完全契合的、从零开始入门Python爬虫的书。
 
 ## 文本挖掘与分析
 课程&学习笔记：[text-mining-and-analytics-coursera](./text-mining-and-analytics-coursera/README.md)
@@ -144,11 +152,6 @@ ongoing
 ## Reading
 - **《数学之美》**  
 ![数学之美_notes_20190301](./graph/数学之美_20190301.png)
-
-- **《从零开始学Python网络爬虫》**  
-**Note： [crawler_python_from_scratch.ipynb](./crawler_python_from_scratch/crawler_python_from_scratch.ipynb)**  
-很基础的知识框架，Python爬虫相关的工具方法都提到了，但理论知识点到为止，不够详细。优点：爬虫实例很多，有代码，容易上手和理解爬虫用到的工具。  
-此书是一本和书名完全契合的、从零开始入门Python爬虫的书。  
 
 
 - **《概率论与数理统计》陈希孺**  
