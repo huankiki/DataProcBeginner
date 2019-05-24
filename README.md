@@ -49,13 +49,13 @@
 ## 文本挖掘与分析
 课程&学习笔记：[text-mining-and-analytics-coursera](./text-mining-and-analytics-coursera/README.md)
 
-## SVM（支持向量机）
+## √ SVM（支持向量机）
 - **强烈推荐：[SVM Tutorial](https://www.svm-tutorial.com/)**   
 通过认真通读这本电子书，对SVM有了比较清晰的理解，虽然公式会淡忘。这主要是因为这本书从最基础的数学和问题出发，沿着很清晰的脉络，循序渐进的讲解：问题是什么？为什么要这么做？怎么做。所以对穿插其中的很多数学公式和理论就不那么糊涂了。
 - 在读了前面提到的这本书之后，再去读任何SVM的中文技术博客，都很容易理解。  
 此处推荐也很不错的一篇文章：[学习SVM，这篇文章就够了！](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247487755&idx=1&sn=22b1e130bdbf8657b61aba492fdc6b7d&chksm=ebb429dfdcc3a0c95b4dd6281639277b165cfdd28234e45cb3f2feb8d2158e50e951d681524c&mpshare=1&scene=24&srcid=02223jFOWQgkXSTxor58Tvgt#rd)
 - **代码实践**  
-代码：[svm code](./svm/README.md)。  
+**代码：[svm code](./svm/README.md)**。  
 借鉴开源代码或工具，用三种方式实现SVM，作为练习，分别是：①SVM的python实现；②sklearn；③libsvm。
 
 
