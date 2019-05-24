@@ -35,15 +35,16 @@
 
 ## √ 正则表达式
 **Note:** [regex](./regex/readme.md)，包括正则表达式的语法，以及Python正则表达式实践。  
-在工作中遇到的一个问题的解决方法: [demo_regex.py](./regex/demo_regex.py)，用到了正则表达式中的：位置匹配、子表达式、回溯引用等语法。
+- 在工作中遇到的一个问题的解决方法: [demo_regex.py](./regex/demo_regex.py)，用到了正则表达式中的：位置匹配、子表达式、回溯引用等语法。  
+- 在学习英语的时候，想看纯英文字幕，但英文字幕的timeline是不准确的，而纯中文字幕的timeline是OK的，所以写了一个脚本，可以将英文字幕的字幕内容和中文字幕的时间轴合并成新的字幕文件。参看： [srt_adjust.py](./regex/srt_adjust/srt_adjust.py)
 
 
 ## √《从零开始学Python网络爬虫》
 **Note： [crawler_python_from_scratch.ipynb](./crawler_python_from_scratch/crawler_python_from_scratch.ipynb)**  
 **实践：[爬取NLPJOB网站的职位](./crawler_python_from_scratch/nlpjob/nlpjob_crawler.py)**，URL：[NLPJOB网站](http://www.nlpjob.com/jobs)  
-
-很基础的知识框架，Python爬虫相关的工具方法都提到了，但理论知识点到为止，不够详细。优点：爬虫实例很多，有代码，容易上手和理解爬虫的基本理论和常见方法。  
-此书是一本和书名完全契合的、从零开始入门Python爬虫的书。
+ >很基础的知识框架，Python爬虫相关的工具方法都提到了，但理论知识点到为止，不够详细。  
+ >**优点：爬虫实例很多，有代码，容易上手，可理解爬虫的基本理论和常见方法。**  
+ > 此书是一本和书名完全契合的、从零开始入门Python爬虫的书。
 
 ## 文本挖掘与分析
 课程&学习笔记：[text-mining-and-analytics-coursera](./text-mining-and-analytics-coursera/README.md)
