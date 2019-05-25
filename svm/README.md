@@ -63,7 +63,13 @@ kernel: ‘linear’, ‘poly’, **‘rbf’(默认)**, ‘sigmoid’, ‘preco
 > A python interface has been included in LIBSVM since version 2.33.
 - [libsvm-guide](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf)
 - [Github-libsvm-python-interface](https://github.com/cjlin1/libsvm/tree/master/python)
-
+- -t kernel_type : set type of kernel function (default 2)  
+	0 -- linear: u'*v  
+	1 -- polynomial: (gamma*u'*v + coef0)^degree  
+	2 -- radial basis function: exp(-gamma*|u-v|^2)  
+	3 -- sigmoid: tanh(gamma*u'*v + coef0)  
+	4 -- precomputed kernel (kernel values in training_set_file)  
+	
 #### Step1，下载libsvm project，编译
 ```bash
 git clone https://github.com/cjlin1/libsvm.git
@@ -72,14 +78,63 @@ make
 cd python
 make
 ```
-检查是否安装成功：
+将编译好的libsvm.so.2放到目录~/.local/lib/python3.5。  
+将python目录下的svm.py和svmutil.py拷贝到~/.local/lib/python3.5/site-packages。  
+
+将当前目录从libsvm/python改变到其他目录，检查安装是否成功，没有报错即安装成功。
 ```python
 python3
+>>> import sys
+## 这一步必不可少
+>>> sys.path.append('home/username/Downloads/libsvm/python')
 >>> from svmutil import *
-
 ```
 
 #### Step2，采用与sklearn相同的数据集，训练、预测
+采用与上一节sklearn相同的数据集，用libsvm的python接口，做训练和预测。  
+核函数分别选择linear(-t 0)、poly(-t 1)和rbf(-t 2)。
+```text
+python3 libsvm_python_interface.py
+```
+结果如下所示。  
+![](./graph/svm_libsvm.png)
+
+```python
+## linear，Accuracy = 89% (89/100) (classification)
+[[66  2]
+ [ 9 23]]
+              precision    recall  f1-score   support
+           0       0.88      0.97      0.92        68
+           1       0.92      0.72      0.81        32
+   micro avg       0.89      0.89      0.89       100
+
+
+## poly，Accuracy = 86% (86/100) (classification)
+[[67  1]
+ [13 19]]
+              precision    recall  f1-score   support
+           0       0.84      0.99      0.91        68
+           1       0.95      0.59      0.73        32
+   micro avg       0.86      0.86      0.86       100
+
+
+## rbf，Accuracy = 93% (93/100) (classification)
+[[64  4]
+ [ 3 29]]
+              precision    recall  f1-score   support
+           0       0.96      0.94      0.95        68
+           1       0.88      0.91      0.89        32
+   micro avg       0.93      0.93      0.93       100
+```
+
+
+P.S.  为了得视图化的结果，废了老大劲(2 hours，但成就感满满)，主要是因为libsvm的数据格式与numpy有很大不同，所以要转换（具体实现请看代码）。  
+- 1, 如何画出上图中的效果，为什么要用ravel，参看：[here](https://stackoverflow.com/questions/35811273/scikit-learn-and-data-visusalisation-why-do-i-have-to-use-ravel-when-i-use-pred)
+- 2, bug: AttributeError: 'bool' object has no attribute 'mean'  
+最初使用了`np.ones((point_num, 1)`, 这是错误的，创建了二维矩阵，而不是一维数组，所以一直报错。  
+正确使用如下： `Y12 = np.ones((point_num, ), dtype=np.float64)`
+- 3, bug： AttributeError: 'list' object has no attribute 'reshape'  
+libsvm的预测结果是list， 而非numpy array，所以需要转换： `np.array(Y_pred)`
 
 
 ## 小结
