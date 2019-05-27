@@ -19,9 +19,9 @@
 **Note：[RNN_LSTM_Note](./rnn_lstm/)**  
 必须掌握的深度学习方法，尤其对NLP而言。通过Note中列出的一些参考资料（很棒），第一次对RNN和LSTM有了一定的理解。
 
-## √ Sequence Models - coursera
-[Sequence Models - coursera](https://www.coursera.org/learn/nlp-sequence-models/home/welcome)  
-完成了7个编程作业中的一个：[emojify-assignment5](./rnn_lstm/emojify-assignment5)，涉及到词向量、Softmax、LSTM等。  
+## √ Sequence Models - Coursera
+[Sequence Models - Coursera](https://www.coursera.org/learn/nlp-sequence-models/home/welcome)  
+完成了7个编程作业中的一个：[Emojify-Assignment5](rnn_lstm/Emojify-Assignment5)，涉及到词向量、Softmax、LSTM等。  
 参考资料：[zeeshan87/sequence-models](https://github.com/zeeshan87/sequence-models)  
 ![](./graph/Sequence_Models.png)
 
