@@ -1,0 +1,144 @@
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/liushuhuan/.local/lib/python3.5/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-05-29 11:03:47.093954: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-29 11:03:51.247574: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2401000000 Hz
+2019-05-29 11:03:52.057491: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0xf175c10 executing computations on platform Host. Devices:
+2019-05-29 11:03:52.058303: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-05-29 11:04:00.689222: W tensorflow/core/framework/allocator.cc:124] Allocation of 80000200 exceeds 10% of system memory.
+2019-05-29 11:06:05.502765: W tensorflow/core/framework/allocator.cc:124] Allocation of 80000200 exceeds 10% of system memory.
+2019-05-29 11:06:51.088117: W tensorflow/core/framework/allocator.cc:124] Allocation of 80000200 exceeds 10% of system memory.
+WARNING:tensorflow:From /home/liushuhuan/.local/lib/python3.5/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+input_1 (InputLayer)         (None, 10)                0
+_________________________________________________________________
+embedding_1 (Embedding)      (None, 10, 50)            20000050
+_________________________________________________________________
+lstm_1 (LSTM)                (None, 10, 128)           91648
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 10, 128)           0
+_________________________________________________________________
+lstm_2 (LSTM)                (None, 128)               131584
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 128)               0
+_________________________________________________________________
+dense_1 (Dense)              (None, 5)                 645
+_________________________________________________________________
+activation_1 (Activation)    (None, 5)                 0
+=================================================================
+Total params: 20,223,927
+Trainable params: 223,877
+Non-trainable params: 20,000,050
+_________________________________________________________________
+WARNING:tensorflow:From /home/liushuhuan/.local/lib/python3.5/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Epoch 1/50
+132/132 [==============================] - 18s 135ms/step - loss: 1.6018 - acc: 0.1818
+Epoch 2/50
+132/132 [==============================] - 0s 3ms/step - loss: 1.5348 - acc: 0.2727
+Epoch 3/50
+132/132 [==============================] - 0s 3ms/step - loss: 1.4849 - acc: 0.3030
+Epoch 4/50
+132/132 [==============================] - 0s 3ms/step - loss: 1.4255 - acc: 0.3712
+Epoch 5/50
+132/132 [==============================] - 0s 4ms/step - loss: 1.3333 - acc: 0.4848
+Epoch 6/50
+132/132 [==============================] - 0s 4ms/step - loss: 1.2067 - acc: 0.6136
+Epoch 7/50
+132/132 [==============================] - 0s 3ms/step - loss: 1.0459 - acc: 0.6667
+Epoch 8/50
+132/132 [==============================] - 0s 3ms/step - loss: 0.9126 - acc: 0.6515
+Epoch 9/50
+132/132 [==============================] - 0s 4ms/step - loss: 0.9055 - acc: 0.6818
+Epoch 10/50
+132/132 [==============================] - 1s 5ms/step - loss: 0.8136 - acc: 0.7045
+Epoch 11/50
+132/132 [==============================] - 0s 4ms/step - loss: 0.7149 - acc: 0.7727
+Epoch 12/50
+132/132 [==============================] - 1s 4ms/step - loss: 0.7586 - acc: 0.6894
+Epoch 13/50
+132/132 [==============================] - 1s 4ms/step - loss: 0.6277 - acc: 0.7576
+Epoch 14/50
+132/132 [==============================] - 1s 5ms/step - loss: 0.5218 - acc: 0.8333
+Epoch 15/50
+132/132 [==============================] - 1s 5ms/step - loss: 0.5203 - acc: 0.8030
+Epoch 16/50
+132/132 [==============================] - 1s 7ms/step - loss: 0.4263 - acc: 0.8030
+Epoch 17/50
+132/132 [==============================] - 1s 10ms/step - loss: 0.3691 - acc: 0.8712
+Epoch 18/50
+132/132 [==============================] - 1s 4ms/step - loss: 0.4154 - acc: 0.8409
+Epoch 19/50
+132/132 [==============================] - 1s 4ms/step - loss: 0.3678 - acc: 0.8485
+Epoch 20/50
+132/132 [==============================] - 1s 4ms/step - loss: 0.3188 - acc: 0.8864
+Epoch 21/50
+132/132 [==============================] - 1s 10ms/step - loss: 0.3358 - acc: 0.8788
+Epoch 22/50
+132/132 [==============================] - 1s 5ms/step - loss: 0.2509 - acc: 0.9167
+Epoch 23/50
+132/132 [==============================] - 1s 4ms/step - loss: 0.1928 - acc: 0.9470
+Epoch 24/50
+132/132 [==============================] - 1s 9ms/step - loss: 0.2207 - acc: 0.9242
+Epoch 25/50
+132/132 [==============================] - 1s 7ms/step - loss: 0.1873 - acc: 0.9318
+Epoch 26/50
+132/132 [==============================] - 1s 4ms/step - loss: 0.1475 - acc: 0.9470
+Epoch 27/50
+132/132 [==============================] - 1s 6ms/step - loss: 0.1683 - acc: 0.9545
+Epoch 28/50
+132/132 [==============================] - 0s 4ms/step - loss: 0.1467 - acc: 0.9545
+Epoch 29/50
+132/132 [==============================] - 1s 5ms/step - loss: 0.2302 - acc: 0.8939
+Epoch 30/50
+132/132 [==============================] - 1s 5ms/step - loss: 0.2836 - acc: 0.9091
+Epoch 31/50
+132/132 [==============================] - 1s 8ms/step - loss: 0.3225 - acc: 0.9242
+Epoch 32/50
+132/132 [==============================] - 1s 8ms/step - loss: 0.1616 - acc: 0.9394
+Epoch 33/50
+132/132 [==============================] - 1s 6ms/step - loss: 0.1400 - acc: 0.9621
+Epoch 34/50
+132/132 [==============================] - 2s 13ms/step - loss: 0.1094 - acc: 0.9697
+Epoch 35/50
+132/132 [==============================] - 1s 5ms/step - loss: 0.1104 - acc: 0.9697
+Epoch 36/50
+132/132 [==============================] - 1s 4ms/step - loss: 0.5917 - acc: 0.8409
+Epoch 37/50
+132/132 [==============================] - 1s 5ms/step - loss: 0.4911 - acc: 0.8561
+Epoch 38/50
+132/132 [==============================] - 1s 5ms/step - loss: 0.1752 - acc: 0.9545
+Epoch 39/50
+132/132 [==============================] - 1s 5ms/step - loss: 0.3432 - acc: 0.8561
+Epoch 40/50
+132/132 [==============================] - 1s 4ms/step - loss: 0.2022 - acc: 0.9470
+Epoch 41/50
+132/132 [==============================] - 1s 6ms/step - loss: 0.1368 - acc: 0.9621
+Epoch 42/50
+132/132 [==============================] - 1s 9ms/step - loss: 0.1390 - acc: 0.9545
+Epoch 43/50
+132/132 [==============================] - 1s 11ms/step - loss: 0.1217 - acc: 0.9470
+Epoch 44/50
+132/132 [==============================] - 1s 5ms/step - loss: 0.0680 - acc: 0.9924
+Epoch 45/50
+132/132 [==============================] - 1s 4ms/step - loss: 0.0702 - acc: 0.9697
+Epoch 46/50
+132/132 [==============================] - 1s 4ms/step - loss: 0.0590 - acc: 0.9697
+Epoch 47/50
+132/132 [==============================] - 1s 4ms/step - loss: 0.0459 - acc: 0.9924
+Epoch 48/50
+132/132 [==============================] - 1s 5ms/step - loss: 0.0649 - acc: 0.9773
+Epoch 49/50
+132/132 [==============================] - 1s 11ms/step - loss: 0.0294 - acc: 1.0000
+Epoch 50/50
+132/132 [==============================] - 1s 5ms/step - loss: 0.0256 - acc: 0.9924
+56/56 [==============================] - 1s 17ms/step
+
+Test accuracy =  0.8035714200564793
+not feeling happy 😞

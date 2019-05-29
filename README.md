@@ -21,8 +21,14 @@
 
 ## √ Sequence Models - Coursera
 [Sequence Models - Coursera](https://www.coursera.org/learn/nlp-sequence-models/home/welcome)  
-完成了7个编程作业中的一个：[Emojify-Assignment5](rnn_lstm/Emojify-Assignment5)，涉及到词向量、Softmax、LSTM等。  
-参考资料：[zeeshan87/sequence-models](https://github.com/zeeshan87/sequence-models)  
+共有7个编程作业，完成了其中的一个：[Emojify-Assignment5](rnn_lstm/Emojify-Assignment5)，涉及到词向量、Softmax、LSTM等。  
+- 文本分类器，一句话对应一个Emoji符号
+- Baseline，Word Vector + Softmax
+- Version 2，2层LSTM（Keras) + Softmax + Word Vector + Padding
+- 参考资料：[zeeshan87/sequence-models](https://github.com/zeeshan87/sequence-models)
+- 需要安装keras、tensorflow等，词向量glove.6B.50d.txt下载较慢  
+> Good Exercise，对：1)如何在深度学习中使用词向量有了解；2）如何用LSTM+词向量做文本分类有了解  
+
 ![](./graph/Sequence_Models.png)
 
 
