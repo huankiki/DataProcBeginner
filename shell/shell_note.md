@@ -107,3 +107,109 @@ fi
 - [[-z $str1]]：如果str1为空串，则返回真。
 - [[-n $str1]]：如果str1不为空串，则返回真。
 
+
+## cat命令
+cat命令的-n选项会在输出的每一行内容之前加上行号。选项-n会为包括空行在内的所有行生成行号。如果想跳过空白行，可以使用选项-b。
+
+cat命令不允许使用相同的文件作为输入和重定向后的输出。
+
+
+
+## xargs
+- xargs默认的echo命令将多行输入转换成单行输出
+```
+$ cat example.txt
+1 2 3 4 5 6
+7 8 9 10
+11 12
+
+$ cat example.txt | xargs
+1 2 3 4 5 6 7 8 9 10 11 12
+```
+- xargs的-n选项可以限制每次调用命令时用到的参数个数，将单行输入转换成多行输出
+```
+$ cat example.txt | xargs -n 3
+1 2 3
+4 5 6
+7 8 9
+10 11 12
+```
+- 用-d选项定义一个用来分隔参数的分隔符
+
+xargs默认使用空白字符分割输入并执行/bin/echo。如果文件或目录名中包含空格或换行的话，使用空白字符来分割输入就会出现问题。比如My Documents目录就会被解析成两个元素：My和Documents，而这两者均不存在。
+
+
+
+## tr
+tr只能通过stdin（标准输入）接收输入（无法通过命令行参数接收）。其调用格式如下：
+```
+tr [options] set1 set2
+```
+来自stdin的输入字符会按照位置从set1映射到set2（set1中的第一个字符映射到set2中的第一个字符，以此类推），然后将输出写入stdout（标准输出）。set1和set2是字符类或字符组。如果两个字符组的长度不相等，那么set2会不断复制其最后一个字符，直到长度与set1相同。如果set2的长度大于set1，那么在set2中超出set1长度的那部分字符则全部被忽略。
+
+- 将大写转换成小写
+```
+$ echo "HELLO WHO IS THIS" | tr 'A-Z' 'a-z'
+hello who is this
+```
+- 删除字符
+```
+# 删除数字
+$ echo "Hello 123 world 456" | tr -d '0-9'
+Hello world
+
+#删除多余的空格
+$ echo "GNU is         not      UNIX." | tr -s ' '
+GNU is not UNIX.
+
+#删除多余的换行符
+$ cat multi_blanks.txt | tr -s '\n'
+```
+
+
+## sort + uniq
+- 依据列排序
+
+```
+$ cat data.txt
+1   mac     2000
+2   winxp     4000
+3   bsd     1000
+4   linux     1000
+
+# 依据第1列，以逆序形式排序，-nr表明按照数字顺序，采用逆序形式排序
+$ sort -nrk 1   data.txt
+4   linux     1000
+3   bsd     1000
+2   winxp     4000
+1   mac     2000
+
+# 依据第2列进行排序
+$ sort -k 2   data.txt
+3   bsd     1000
+4   linux     1000
+1   mac     2000
+2   winxp     4000
+```
+
+- uniq只能作用于排过序的数据，因此，uniq通常都与sort命令结合使用。
+```
+# 排序，并打印输入中的所有行，其中重复的行只打印一次
+sort unsorted.txt | uniq
+
+# 排序，并统计各行在文件中出现的次数
+sort unsorted.txt | uniq -c
+
+# 排序，并打印没有重复出现的行
+sort unsorted.txt | uniq -u
+
+# 排序，并打印重复出现的行
+sort unsorted.txt | uniq -d
+
+
+```
+
+
+
+
+
