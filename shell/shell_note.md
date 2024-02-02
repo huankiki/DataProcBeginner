@@ -206,10 +206,132 @@ sort unsorted.txt | uniq -u
 # 排序，并打印重复出现的行
 sort unsorted.txt | uniq -d
 
-
 ```
 
+## 提取文件名、扩展名
+- 借助`%`操作符，从name.extension中提取文件名name
+```
+file_jpg="sample.jpg"
+name=${file_jpg%.*}
+echo File name is: $name
+```
+`${VAR%.*} `的含义如下。
 
+从`$VAR`中删除位于`%`右侧的通配符（在上例中是.*）所匹配的字符串。通配符从右向左进行匹配。给VAR赋值，即`VAR=sample.jpg`。通配符从右向左匹配到的内容是`.jpg`，因此从`$VAR`中删除匹配结果，得到输出`sample`。
+`%`属于非贪婪（non-greedy）操作。它从右向左找出匹配通配符的最短结果。还有另一个操作符`%%`，它与`%`相似，但行为模式却是贪婪的，这意味着它会匹配符合通配符的最长结果。例如，`VAR=hack.fun.book.txt`，使用`%%`操作符`echo ${VAR%%.*}`从右向左执行贪婪匹配，得到匹配结果`.fun.book.txt`。
 
+- 借助`#`操作符，从name.extension中提取扩展名extension
 
+`#`操作符可以从文件名中提取扩展名。这个操作符与`%`类似，不过求值方向是从左向右。`${VAR#*.}`的含义如下：从`$VAR`中删除位于`#`右侧的通配符（即在上例中使用的*.）从左向右所匹配到的字符串。和`%%`类似，`#`也有一个对应的贪婪操作符`##`。`##`从左向右进行贪婪匹配，并从指定变量中删除匹配结果。例如，`VAR=hack.fun.book.txt`，
+使用`##`操作符`echo ${VAR##*.}`从左向右执行贪婪匹配，得到匹配结果`hack.fun.book`：命令输出：`txt`。
+
+## diff
+选项-u用于生成一体化输出，一体化输出的可读性更好，更易于看出两个文件之间的差异。在一体化diff输出中，以+起始的是新加入的行，以-起始的是被删除的行。
+```
+$ diff -u version1.txt version2.txt
+--- version1.txt   2010-06-27 10:26:54.384884455+0530
++++version2.txt   2010-06-27 10:27:28.782140889+0530
+ -1,5+1,5
+this is the original text
+line2
+-line3
+line4
+happy hacking !
+-
++GNU is not UNIX
+```
+
+## grep
+grep命令默认使用基础正则表达式。选项-E可以使grep使用扩展正则表达式。也可以使用默认启用扩展正则表达式的egrep命令。
+```
+$ grep -E "[a-z]+" filename
+$ egrep "[a-z]+" filename
+```
+- 选项-o可以只输出匹配到的文本
+```
+$ echo this is a line. | egrep -o "[a-z]+\."
+line
+```
+- 选项-v可以打印出不匹配match_pattern的所有行
+- 选项-n可以打印出匹配字符串所在行的行号
+- 选项-i可以在匹配模式时不考虑字符的大小写
+- 选项-e可以指定多个匹配模式
+```
+$ echo this is a line of text | grep -o -e "this" -e "line"
+this
+line
+```
+
+## cut
+- cut命令可以按列，而不是按行来切分文件。
+- 选项-d能够设置分隔符。
+- 选项-f可以指定要提取的字段，`cut -f 2,3 filename`，该命令将显示第2列和第3列。
+```
+$ cat delimited_data.txt
+No;Name;Mark;Percent
+1;Sarath;45;90
+2;Alex;49;98
+3;Anu;45;90
+
+$ cut -f2 -d ";" delimited_data.txt
+Name
+Sarath
+Alex
+Anu
+```
+
+## sed
+- g标记可以使sed执行全局替换，没有g标记则只替换了每行中模式首次匹配的内容
+- /#g标记可以使sed替换第N次以及第N次之后的匹配
+- 选项-i会使得sed用修改后的数据替换原始文件
+```
+$ sed 's/pattern/replace_string/' file
+$ sed 's/pattern/replace_string/g' file
+$ sed -i 's/text/replace/' file
+
+$ echo thisthisthisthis | sed 's/this/THIS/2g'
+thisTHISTHISTHIS
+$ echo thisthisthisthis | sed 's/this/THIS/2'
+thisTHISthisthis
+$ echo thisthisthisthis | sed 's/this/THIS/3g'
+thisthisTHISTHIS
+```
+- 移除空行 `sed '/^$/d' file`
+- 子串匹配标记 \1
+```
+echo seven EIGHT | sed 's/\([a-z]\+\) \([A-Z]\+\)/\2 \1/'
+EIGHT seven
+```
+([a-z]\+\)匹配第一个单词，\([A-Z]\+\)匹配第二个单词。\1和\2分别用来引用这两个单词。这种引用形式叫作向后引用（back reference）。在替换部分，它们的次序被更改为\2\1，因此就呈现出了逆序的结果。
+- -e选项组合多个表达式
+```
+ $ echo abc | sed 's/a/A/' | sed 's/c/C/'
+ AbC
+ $ echo abc | sed 's/a/A/;s/c/C/'
+ AbC
+ $ echo abc | sed -e 's/a/A/' -e 's/c/C/'
+ AbC
+```
+
+## awk
+awk脚本通常由3部分组成：BEGIN、END和带模式匹配选项的公共语句块（common statement block）。这3个部分都是可选的。
+
+awk以逐行的形式处理文件。BEGIN之后的命令会先于公共语句块执行。对于匹配PATTERN的行，awk会对其执行PATTERN之后的命令。最后，在处理完整个文件之后，awk会执行END之后的命令。
+```
+awk 'BEGIN{statement} {commands} END{statement}'
+awk 'BEGIN{ print "start" } patten{ commands } END{print "end"}' file
+
+# NR：表示记录编号，当awk将行作为记录时，该变量相当于当前行号。
+# NF：表示字段数量，在处理当前记录时，相当于字段数量。默认的字段分隔符是空格。
+# $0：该变量包含当前记录的文本内容。
+# $1：该变量包含第一个字段的文本内容。
+# $2：该变量包含第二个字段的文本内容。
+$ echo -e "line1 f2 f3\nline2 f4 f5\nline3 f6 f7" | awk '{ print "Line no:"NR",No of fields:"NF, "$0="$0, "$1="$1,"$2="$2,"$3="$3 }'
+Line no:1,No of fields:3 $0=line1 f2 f3 $1=line1 $2=f2 $3=f3
+Line no:2,No of fields:3 $0=line2 f4 f5 $1=line2 $2=f4 $3=f5
+Line no:3,No of fields:3 $0=line3 f6 f7 $1=line3 $2=f6 $3=f7
+
+# 打印出每一行的第二和第三个字段
+$ awk '{ print $3, $2 }'   file
+```
 
